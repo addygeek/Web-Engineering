@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya's Employee Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .toggle {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .toggle a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .toggle a:hover {
+            text-decoration: underline;
+        }
+
+        .profile {
+            display: none;
+            text-align: center;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function toggleForm(event) {
+            event.preventDefault();
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+            registerForm.style.display = registerForm.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function registerUser(event) {
+            event.preventDefault();
+            const name = document.getElementById('reg-name').value;
+            const email = document.getElementById('reg-email').value;
+            const username = document.getElementById('reg-username').value;
+            const password = document.getElementById('reg-password').value;
+
+            if (name && email && username && password) {
+                const user = { name, email, username, password };
+                localStorage.setItem('user', JSON.stringify(user));
+                alert('Registration successful! Please log in.');
+                toggleForm(event);
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+
+        function loginUser(event) {
+            event.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.username === username && storedUser.password === password) {
+                alert('Login successful!');
+                showProfile(storedUser);
+            } else {
+                alert('Incorrect username or password.');
+            }
+        }
+
+        function showProfile(user) {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'none';
+
+            const profile = document.querySelector('.profile');
+            profile.style.display = 'block';
+            profile.innerHTML = `
+                <img src="https://via.placeholder.com/100" alt="Profile Picture">
+                <h2>Welcome, ${user.name}</h2>
+                <p>Email: ${user.email}</p>
+            `;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+            if (storedUser) {
+                showProfile(storedUser);
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Aditya's Employee Portal</h1>
+
+        <!-- Login Form -->
+        <form id="login-form" onsubmit="loginUser(event)">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="login-username" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+
+            <input type="submit" value="Login">
+            <div class="toggle">
+                Don't have an account? <a href="#" onclick="toggleForm(event)">Register</a>
+            </div>
+        </form>
+
+        <!-- Registration Form -->
+        <form id="register-form" style="display: none;" onsubmit="registerUser(event)">
+            <label for="reg-name">Full Name:</label>
+            <input type="text" id="reg-name" name="reg-name" required>
+
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" name="reg-email" required>
+
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" name="reg-username" required>
+
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="reg-password" required>
+
+            <input type="submit" value="Register">
+            <div class="toggle">
+                Already have an account? <a href="#" onclick="toggleForm(event)">Login</a>
+            </div>
+        </form>
+
+        <!-- Profile Display -->
+        <div class="profile"></div>
+    </div>
+</body>
+
+</html>
