@@ -2,57 +2,52 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(120deg, #f0f8ff, #4682b4);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    color: #333;
 }
 
 .container {
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.assignment-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.assignment-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.assignment-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid #fff;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    margin: 10px;
-    width: 200px;
-    border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
 }
 
-.assignment-card:hover {
-    transform: translateY(-10px);
-    background-color: rgba(255, 255, 255, 0.2);
+.header {
+    text-align: center;
+    padding: 20px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.logo {
+    width: 100px;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #007BFF;
+    color: #fff;
 }
