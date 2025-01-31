@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef5ff;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #004aad;
+}
+
+.assignment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.assignment-list li {
+    margin: 10px 0;
+}
+
+.assignment-list a {
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.assignment-list a:hover {
+    background: #0056b3;
+}
+
+/* Background demo */
+.background-demo {
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 50px;
+    opacity: 0.8;
+}
+
+/* Text effects */
+.glow-text {
+    font-size: 2rem;
+    color: #ff0080;
+    text-shadow: 0px 0px 10px rgba(255, 0, 128, 0.8);
+}
+
+.shadow-text {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Transformations */
+.transform-box {
+    background: lightblue;
+    padding: 20px;
+    width: 200px;
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.transform-box:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #eef5ff;
+}
+
+/* Good Vibes Form */
+.good-vibes-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    color: #ff69b4;
+}
+
+/* Product Landing Page */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 5px 0;
+}
