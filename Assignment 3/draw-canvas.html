@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Canvas Drawing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Draw on the Canvas</h1>
+        <canvas id="drawCanvas" width="500" height="400"></canvas>
+        <br>
+        <button onclick="clearCanvas()">Clear Canvas</button>
+        <br><br>
+        <a href="index.html">Back to Home</a>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('drawCanvas');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+
+        // Start drawing
+        canvas.addEventListener('mousedown', (e) => {
+            drawing = true;
+            ctx.beginPath();
+            ctx.moveTo(e.offsetX, e.offsetY);
+        });
+
+        // Draw when moving the mouse
+        canvas.addEventListener('mousemove', (e) => {
+            if (!drawing) return;
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.strokeStyle = "blue"; // Set drawing color
+            ctx.lineWidth = 3; // Set line thickness
+            ctx.stroke();
+        });
+
+        // Stop drawing
+        canvas.addEventListener('mouseup', () => drawing = false);
+        canvas.addEventListener('mouseleave', () => drawing = false);
+
+        // Function to clear the canvas
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</body>
+</html>
