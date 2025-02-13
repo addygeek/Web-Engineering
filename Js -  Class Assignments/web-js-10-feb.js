@@ -139,3 +139,19 @@ class Parent {
   const parentInstance = new Parent();
   parentInstance.instanceMethod();  // "This is an instance method in the Parent class."
   
+  //QNS 5 : 
+  // Define the first object (obj1) with a method
+const obj1 = {
+  name: "Alice",
+  greet: function(age) {
+    console.log(`Hello, my name is ${this.name} and I am ${age} years old.`);
+  }
+};
+
+// Define the second object (obj2)
+const obj2 = {
+  name: "Bob"
+};
+
+// Borrow the 'greet' method from obj1 and use it with obj2
+obj1.greet.call(obj2, 30);  // Output: "Hello, my name is Bob and I am 30 years old."
