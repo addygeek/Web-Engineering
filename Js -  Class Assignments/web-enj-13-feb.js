@@ -210,3 +210,9 @@
     const val = await f();
     console.log(f());
     
+
+    function p() 
+    {
+        x = new Promise(resolve,reject);
+        
+    }

@@ -1,0 +1,105 @@
+:root {
+    --primary: #2c3e50;
+    --secondary: #3498db;
+    --success: #2ecc71;
+    --danger: #e74c3c;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+button {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.message {
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: none;
+}
+
+.success {
+    background: var(--success);
+    color: white;
+}
+
+.error {
+    background: var(--danger);
+    color: white;
+}
+
+.guesses {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.guess-number {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background: #f0f0f0;
+}

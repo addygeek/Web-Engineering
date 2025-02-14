@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Challenges</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+</head>
+<body>
+    <div class="container">
+        <!-- Guessing Game -->
+        <div class="card">
+            <h2>Number Guessing Game</h2>
+            <div class="input-group">
+                <input type="number" id="guessInput" placeholder="Enter your guess (1-100)">
+            </div>
+            <button onclick="checkGuess()">Submit Guess</button>
+            <div id="message" class="message"></div>
+            <div id="guesses" class="guesses"></div>
+            <div id="remaining">Remaining tries: 5</div>
+        </div>
+
+        <!-- Binary Search -->
+        <div class="card">
+            <h2>Binary Search</h2>
+            <div class="input-group">
+                <input type="text" id="arrayInput" placeholder="Enter sorted numbers (comma separated)">
+            </div>
+            <div class="input-group">
+                <input type="number" id="targetInput" placeholder="Enter target number">
+            </div>
+            <button onclick="performBinarySearch()">Search</button>
+            <div id="bsResult" class="message"></div>
+        </div>
+
+        <!-- Substitution Cipher -->
+        <div class="card">
+            <h2>Substitution Cipher</h2>
+            <div id="keyDisplay"></div>
+            <div class="input-group">
+                <input type="text" id="cipherInput" placeholder="Enter text">
+            </div>
+            <button onclick="encodeText()">Encode</button>
+            <button onclick="decodeText()">Decode</button>
+            <div id="cipherResult" class="message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- External JavaScript -->
+</body>
+</html>
