@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contextual Menu | jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <h1>Right-click anywhere to open the contextual menu</h1>
+
+    <!-- Contextual Menu -->
+    <div class="context-menu" id="contextMenu">
+        <ul>
+            <li data-info="Opens a new file">New File</li>
+            <li data-info="Saves the current file">Save</li>
+            <li data-info="Deletes the selected item">Delete</li>
+            <li data-info="Opens the settings panel">Settings</li>
+        </ul>
+        <p class="info-text">Hover over an item to see details</p>
+    </div>
+
+</body>
+</html>

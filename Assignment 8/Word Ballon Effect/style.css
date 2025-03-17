@@ -1,0 +1,68 @@
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    margin: 0;
+}
+
+/* Container */
+.container {
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+#boldBtn {
+    background: #007bff;
+    color: white;
+}
+
+#italicBtn {
+    background: #28a745;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Word Balloon */
+#wordBalloon {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Balloon Arrow */
+#wordBalloon::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,91 @@
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    max-width: 1000px;
+}
+
+/* Image Slider */
+.image-slider {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide Scrollbar */
+.image-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Slider Content */
+.slider-content {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    min-width: fit-content;
+}
+
+/* Images */
+.slider-content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.slider-content img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation Buttons */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slider-wrapper {
+        width: 90%;
+    }
+
+    .slider-content img {
+        width: 200px;
+        height: 120px;
+    }
+}
