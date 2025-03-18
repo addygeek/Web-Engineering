@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Toggle Checkboxes</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        .checkbox-list {
+            margin: 20px 0;
+        }
+        .checkbox-list label {
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Toggle Checkboxes with jQuery</h1>
+        <button id="toggle-checkboxes">Toggle Checkboxes</button>
+        <div class="checkbox-list">
+            <label><input type="checkbox" class="checkbox-item"> Item 1</label>
+            <label><input type="checkbox" class="checkbox-item"> Item 2</label>
+            <label><input type="checkbox" class="checkbox-item"> Item 3</label>
+            <label><input type="checkbox" class="checkbox-item"> Item 4</label>
+            <label><input type="checkbox" class="checkbox-item"> Item 5</label>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var allChecked = false;
+
+            $("#toggle-checkboxes").click(function() {
+                allChecked = !allChecked;
+                $(".checkbox-item").prop("checked", allChecked);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizontal Image Slider</title>
+    <title>Vertical Image Slider</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Horizontal Image Slider</h1>
+        <h1>Image Slider with Sliding and Fading Effects</h1>
         <div class="slider-wrapper">
             <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+            <button class="slide-up">Slide Up</button>
+            <button class="slide-down">Slide Down</button>
+            <button class="slide-toggle">Slide Toggle</button>
+            <button class="fade-in">Fade In</button>
+            <button class="fade-out">Fade Out</button>
+            <button class="fade-to">Fade To</button>
+            <button class="fade-from">Fade From</button>
             <div class="image-slider">
                 <div class="slider-content">
                     <img src="images/img1.png" alt="Image 1">
@@ -22,14 +29,10 @@
                     <img src="images/img6.png" alt="Image 6">
                 </div>
             </div>
-            <button class="next">&gt;</button>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
-//take an image and perform sliding and fading elements in and out of view 
-fucntions to use are slideup, slidedown, slideToggle, fadeIn, fadeOut, fadeto 

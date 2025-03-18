@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Operations</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="ws-18-mar.js"></script>
+</head>
+<body>
+    <h1>jQuery Operations</h1>
+    <button id="run-operations">Run Operations</button>
+    <div id="output"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#run-operations").click(function(){
+                // This will trigger the operations defined in ws-18-mar.js
+                console.log("Button clicked, running operations...");
+
+                // Task 1: Prepare and modify an array with the help of jQuery.map
+                var array1 = [1, 2, 3, 4, 5];
+                var modifiedArray = $.map(array1, function(value, index) {
+                    return value * 2; 
+                });
+                $("#output").append("<p>Modified Array: " + modifiedArray.join(", ") + "</p>");
+
+                
+                var array2 = [6, 7, 8];
+                var combinedArray = $.merge(array1, array2);
+                $("#output").append("<p>Combined Array: " + combinedArray.join(", ") + "</p>");
+
+        
+                var arrayWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+                var uniqueArray = $.unique(arrayWithDuplicates);
+                $("#output").append("<p>Unique Array: " + uniqueArray.join(", ") + "</p>");
+            });
+        });
+        // $(document).ready(function(){
+        //     $
+        // })
+    </script>
+</body>
+</html>
