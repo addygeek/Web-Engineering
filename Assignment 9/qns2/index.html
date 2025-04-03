@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Form Effects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>jQuery Form Effects</h1>
+
+        <!-- Section A: Toggle All Checkboxes -->
+        <section>
+            <h2>Select/Deselect All Checkboxes</h2>
+            <a href="#" id="toggle-checkboxes">Select/Deselect All</a>
+            <div class="checkbox-group">
+                <label><input type="checkbox" class="checkbox-item"> Option 1</label>
+                <label><input type="checkbox" class="checkbox-item"> Option 2</label>
+                <label><input type="checkbox" class="checkbox-item"> Option 3</label>
+                <label><input type="checkbox" class="checkbox-item"> Option 4</label>
+            </div>
+        </section>
+
+        <!-- Section B: Auto-Tabbing Input Fields -->
+        <section>
+            <h2>Auto-Tabbing for Serial Number</h2>
+            <form id="serial-form">
+                <input type="text" maxlength="4" class="serial-input" id="input1">
+                <input type="text" maxlength="4" class="serial-input" id="input2">
+                <input type="text" maxlength="4" class="serial-input" id="input3">
+                <input type="text" maxlength="4" class="serial-input" id="input4">
+            </form>
+        </section>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

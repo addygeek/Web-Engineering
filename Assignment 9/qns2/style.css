@@ -1,0 +1,58 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+    padding: 20px;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+h1, h2 {
+    text-align: center;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 18px;
+}
+
+/* Auto-Tabbing Input Fields */
+#serial-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.serial-input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    outline: none;
+}
+
+.serial-input:focus {
+    border-color: #ff4500;
+}
