@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Kumar - Resume</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+        }
+
+        header p {
+            margin-top: 5px;
+            color: #777;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .contact-info a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #3498db;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #aaa;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Aditya Kumar</h1>
+            <p>Passionate Computer Science Student | Full Stack Developer | AI Enthusiast</p>
+            <div class="contact-info">
+                <a href="mailto:adityaaddylearn@gmail.com">Email</a> |
+                <a href="tel:+917004458028">Phone</a> |
+                <a href="https://www.linkedin.com/in/aditya-kumar-learner/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/addygeek" target="_blank">GitHub</a> |
+                <a href="https://addygeek.github.io/MyPortfolio/" target="_blank">Portfolio</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <p>I'm a third-year CSE student at IIIT Surat with a deep interest in building technology-driven solutions. I have experience in Full Stack Development, Data Science, Machine Learning, and Web3 technologies. I love participating in hackathons and constantly upskilling myself.</p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">Python</div>
+                <div class="skill">C/C++</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">TypeScript</div>
+                <div class="skill">React.js</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">MongoDB</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">Machine Learning</div>
+                <div class="skill">AI</div>
+                <div class="skill">Web Development</div>
+                <div class="skill">Blockchain</div>
+                <div class="skill">Cloud Computing</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <ul>
+                <li>Smart Attendance Management System (React.js, Firebase, GCP)</li>
+                <li>ONDC Platform Marketplace (MERN Stack)</li>
+                <li>Web Scraping Tool using Python</li>
+                <li>PhD Thesis Statistical Analysis (SPSS, R, Python)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Achievements</h2>
+            <ul>
+                <li>2nd Place - GDSC Dev Heat Beta Hackathon</li>
+                <li>Winner - GDSC Web Dev Hacker Award</li>
+                <li>Certified in AI and Cybersecurity courses from IBM, Coursera</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Leadership & Community</h2>
+            <ul>
+                <li>Core Member at E-Cell (Ruminate Club), IIIT Surat</li>
+                <li>Mentor and Speaker at GDSC IIIT Surat</li>
+                <li>Founder - Finance Workshop for Juniors</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Interests</h2>
+            <p>Exploring AI & Web3 technologies, Startups, Financial Markets, Public Speaking, and solving real-world problems through technology.</p>
+        </section>
+
+        <div style="text-align: center;">
+            <button onclick="downloadResume()">Download as PDF</button>
+        </div>
+
+        <footer>
+            &copy; 2025 Aditya Kumar | Built with 💙
+        </footer>
+    </div>
+
+    <script>
+        function downloadResume() {
+            alert('Use Ctrl+P or Right-click → Print → Save as PDF to download!');
+        }
+    </script>
+
+</body>
+</html>

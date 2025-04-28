@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Addy Restro - Taste the Best!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    header h1 {
+      font-size: 4em;
+      margin-bottom: 0.5em;
+    }
+    header p {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    nav {
+      background: #333;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff9f43;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #e67e22;
+    }
+    .about, .menu, .gallery, .contact {
+      text-align: center;
+    }
+    .about p {
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .menu-card {
+      background: #f8f8f8;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-card h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+    .menu-card p {
+      padding: 0 10px 10px;
+      font-size: 0.9em;
+    }
+    .gallery-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    .gallery-images img {
+      width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery-images img:hover {
+      transform: scale(1.05);
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    .contact input, .contact textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .contact button {
+      background: #e67e22;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.2em;
+      transition: background 0.3s;
+    }
+    .contact button:hover {
+      background: #d35400;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header id="home">
+    <h1>Welcome to Addy Restro</h1>
+    <p>Where Taste Meets the Myth!</p>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At Addy Restro, we serve happiness on your plate. Fresh ingredients, magical recipes, and love in every bite. Come experience dining like never before!</p>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1604908812777-7400d8285c4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Burger">
+        <h3>Cheesy Burger</h3>
+        <p>Juicy beef patty topped with cheddar cheese and fresh veggies.</p>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1555992336-cbf3c7d1fa68?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Pizza">
+        <h3>Italian Pizza</h3>
+        <p>Authentic wood-fired pizza with mozzarella and basil toppings.</p>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1572441710513-12a2a0e09162?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Pasta">
+        <h3>Creamy Pasta</h3>
+        <p>Rich, creamy Alfredo pasta with a touch of Parmesan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-images">
+      <img src="https://images.unsplash.com/photo-1565895405130-1a16516f3de5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Dining">
+      <img src="https://images.unsplash.com/photo-1576866209830-34ba5e8e7f98?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Food">
+      <img src="https://images.unsplash.com/photo-1615938079746-833b17af3e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Table">
+      <img src="https://images.unsplash.com/photo-1572262256609-74311c7a2d37?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="Restaurant">
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Addy Restro. All Rights Reserved.
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      alert('Thank you ' + name + '! Your message has been received.');
+      document.querySelector('form').reset();
+    }
+  </script>
+
+</body>
+</html>
